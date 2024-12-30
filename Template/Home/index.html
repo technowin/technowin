@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main_style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technowin Website</title>
+   
+</head>
+<body>
+    
+    <section class="topView" id="topSection">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <a href="https://maps.app.goo.gl/UzynwwU276cmS7su5" target="_blank">
+                    <img src="{% static 'location.png' %}" alt="Location">
+                    Goregaon, Mumbai
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="mailto:technowinitinfra@gmail.com" target="_blank">
+                    <img src="{% static 'gmail.png' %}" alt="Email">
+                    technowinitinfra@gmail.com
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="tel:+917738019120" target="_blank">
+                    <img src="{% static 'mobile.png' %}" alt="Call">
+                    +91 7738019120
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <nav>
+        
+        <div class="logo-menu">
+            <div class="logo">
+                <img src="{% static 'office_logo.png' %}" alt="Company Logo" style="height: 60px; width: 250px;">
+            </div>
+            <button id="menuToggle" class="menu-icon">
+                <img src="{% static 'menu.gif' %}" alt="Menu Icon" style="height: 30px; width: 30px;">
+            </button>
+        </div>
+        <ul id="navLinks" class="hidden">
+            <li style="margin-top:2%"><a href="home">Home</a></li>
+            <li style="margin-top:2%"><a href="about_us">About Us</a></li>
+            <li style="margin-top:2%"><a href="services">Services</a></li>
+            <li style="margin-top:2%"><a href="projects">Projects</a></li>
+            <li>
+                <img class="certificateRoundImg" src="{% static 'iso1.png' %}" alt="ISO Certification">&nbsp;
+            
+                <img class="certificateImg"  src="{% static 'iso.png' %}" alt="ISO Certification">&nbsp;&nbsp;
+            
+                <img class="certificateImg"  src="{% static 'cmmi.png' %}" alt="CMMI Certification">
+            </li>
+            <li>
+                <div class="language-dropdown">
+                    <br>
+                    <select id="language" name="language">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="es">Español</option>
+                        <option value="de">Deutsch</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    
+
+    <!-- Slider Section -->
+    <section>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active" style="background-image: url('{% static 'app1.png' %}')"></div>
+                <div class="slide" style="background-image: url('{% static 'cloud1.png' %}')"></div>
+                <div class="slide" style="background-image: url('{% static 'web1.png' %}')"></div>
+                <div class="slide" style="background-image: url('{% static 'hardware.png' %}')"></div>
+                <div class="slide" style="background-image: url('{% static 'manpower1.png' %}')"></div>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            <div class="dots-container">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="serviceview" >
+        <h2 style="text-align: center; margin-bottom: 30px; font-size: 40px; color: black; text-shadow: 2px 2px 8px rgba(209, 12, 12, 0.4); font-family: 'Arial', sans-serif; letter-spacing: 2px;"><u>Our Services</u></h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+            <!-- Service Boxes -->
+            <div class="service-box">
+                <img src="{% static 'service1.png' %}" alt="Service 1">
+                <h3>Web Development</h3>
+                <p>TechnoWin IT Infra Pvt Ltd offers innovative web development solutions tailored to businesses’ needs. We create dynamic, responsive websites and web applications, ensuring a seamless user experience across all devices. Using the latest technologies, we help businesses enhance their online presence and achieve their goals effectively.</p>
+            </div>
+            <div class="service-box">
+                <img src="{% static 'service2.png' %}" alt="Service 2">
+                <h3>Data Management</h3>
+                <p>TechnoWin IT Infra Pvt Ltd provides comprehensive data management solutions to help businesses organize, store, and analyze their data effectively. Our services ensure data accuracy, security, and easy access, enabling businesses to make informed decisions and streamline operations.</p>
+            </div>
+            <div class="service-box">
+                <img src="{% static 'service3.png' %}" alt="Service 3">
+                <h3>Program Management</h3>
+                <p>TechnoWin IT Infra Pvt Ltd offers expert program management services to help businesses plan, execute, and monitor projects successfully. We ensure alignment with business goals, optimize resources, and deliver results on time, helping organizations achieve their objectives efficiently.</p>
+            </div>
+            <div class="service-box">
+                <img src="{% static 'service4.png' %}" alt="Service 4">
+                <h3>App Development</h3>
+                <p>TechnoWin IT Infra Pvt Ltd specializes in creating custom mobile and web applications tailored to business needs. Our team focuses on building user-friendly, high-performance apps that enhance customer engagement and drive business growth.</p>
+            </div>
+            <div class="service-box">
+                <img src="{% static 'service5.png' %}" alt="Service 5">
+                <h3>Hardware Networking</h3>
+                <p>TechnoWin IT Infra Pvt Ltd delivers robust hardware networking solutions to ensure seamless communication and connectivity within your business. From network setup to maintenance, we provide reliable and secure networking infrastructure that supports business operations and enhances overall efficiency.</p>
+            </div>
+            <div class="service-box">
+                <img src="{% static 'service6.png' %}" alt="Service 6">
+                <h3>Cloud Computing</h3>
+                <p>TechnoWin IT Infra Pvt Ltd offers scalable and secure cloud computing solutions that help businesses manage their data and applications efficiently. Our services provide flexibility, cost savings, and improved performance, enabling businesses to focus on growth while we handle their cloud infrastructure.</p>
+            </div>
+        </div>
+    </section>
+    <section  >
+        <div class="social-links" id="socialIcons">
+            <a href="https://www.facebook.com/share/rDF8hKbxWMA2MWjF/" class="social-icon facebook" target="_blank"><img src="{% static 'facebook1.png' %}" alt="Facebook"></a>
+            <a href="https://x.com/technowin_?t=V2S4gtxt8nCJlhB7KRyKAA&s=09" class="social-icon twitter" target="_blank"><img src="{% static 'twitter.png' %}" alt="Twitter"></a>
+            <a href="#" class="social-icon linkedin" target="_blank"><img src="{% static 'linkedin.png' %}" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/technowin_infra/profilecard/?igsh=eWdyNWllNTlxaWc4" class="social-icon instagram" target="_blank"><img src="{% static 'instagram.png' %}" alt="Instagram"></a>
+            <a href="tel:+917738019120" class="social-icon whatsapp" target="_blank"><img src="{% static 'whatsapp.png' %}" alt="Whatsapp"></a>
+            
+        </div>
+    </section>
+    
+    <footer >
+        <div class="footer-container">
+            <div class="footer-logo">
+                    <img src="{% static 'office_logo.png' %}" alt="Company Logo" style="height: 60px; width: auto;">
+            </div>
+            <div class="footer-links" >
+                <ul>
+                    <li><a href="about_us">About Us</a></li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="projects">Projects</a></li>
+                    <li><a href="contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact" >
+                <p></p>
+                <!-- Back to Top Button -->
+                <button class="back-to-top" title="Go to top">
+                    <i class="fa fa-arrow-up"></i> <!-- FontAwesome arrow-up icon -->
+                </button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechnoWin IT Infra Pvt Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+      
+ 
+</body>
+
+<!-- Include the slider script -->
+<script>
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+    }
+
+    function changeSlide(direction) {
+        currentSlideIndex += direction;
+        if (currentSlideIndex < 0) currentSlideIndex = slides.length - 1;
+        if (currentSlideIndex >= slides.length) currentSlideIndex = 0;
+        showSlide(currentSlideIndex);
+    }
+
+    function currentSlide(index) {
+        currentSlideIndex = index;
+        showSlide(currentSlideIndex);
+    }
+
+    showSlide(currentSlideIndex);
+</script>
+
+<script>
+    // Get the button element
+    let backToTopButton = document.querySelector('.back-to-top');
+    
+    // Listen for scroll events
+    window.onscroll = function() {
+        // Show the button when the user scrolls down 100px or more
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopButton.style.display = "block";  // Show the button
+        } else {
+            backToTopButton.style.display = "none";  // Hide the button when at the top
+        }
+    };
+    
+    // When the button is clicked, smoothly scroll to the top
+    backToTopButton.onclick = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'  // Smooth scroll effect
+        });
+    };
+    </script>
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function () {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks.classList.contains('hidden')) {
+                navLinks.classList.remove('hidden');
+            } else {
+                navLinks.classList.add('hidden');
+            }
+        });
+    </script>    
+
+</html>
